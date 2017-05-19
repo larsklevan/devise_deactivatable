@@ -5,7 +5,7 @@ module DeviceDeactivatable
     end
 
     config.after_initialize do
-      Devise::Mapping.send :include, DeviceDeactivatable::Mapping
+      Devise::Mapping.send :prepend, DeviceDeactivatable::Mapping
     end
   end
 end
