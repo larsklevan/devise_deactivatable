@@ -1,5 +1,5 @@
 class Devise::DeactivateController < DeviseController
-  prepend_before_filter :authenticate_deactivatee!
+  prepend_before_action :authenticate_deactivatee!
   
   # POST /resource/deactivate
   def create
